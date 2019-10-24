@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+{% form_theme form 'bootstrap_4_layout.html.twig' %}
+
+{% block title %}Fiche Concact{% endblock %}
+
+{% block body %}
+
+  <h1> Fiche Contact </h1>
+
+  {{ form_start(form) }}
+
+    {{ form_row(form.nom,  {'attr': {'placeholder': "Entrez votre nom"}})}}
+    {{ form_row(form.prenom, {'attr': {'placeholder': "Entrez votre prénom"}}) }}
+    {{ form_row(form.mail, {'attr': {'placeholder': "Entrez une adresse mail valide"}}) }}
+    {{ form_row(form.departements) }}
+    {{ form_row(form.message, {'attr': {'placeholder': "Que voulez-vous dire ?"}}) }}
+
+    {{ form_row(form.Envoyer) }}
+
+  {{ form_end(form) }}
+
+
+{% endblock %}
